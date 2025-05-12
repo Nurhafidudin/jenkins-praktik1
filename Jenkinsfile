@@ -1,6 +1,9 @@
 pipeline {
-    agent any
-
+   agent {
+        docker{
+            image 'pyton:3.10'
+        }
+    }
     stages {
         stage('Install Dependencies') {
             steps {
